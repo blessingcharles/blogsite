@@ -25,7 +25,7 @@ export default function Home({ newPosts }) {
           </div>
 
           <div className="col-span-1 lg:col-span-4">
-            <div className="relative lg:fixed lg:top-32">
+            <div className="relative lg:fixed lg:top-[18]">
               <PostWidget />
               <Categories />
             </div>

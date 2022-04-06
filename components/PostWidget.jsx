@@ -36,7 +36,7 @@ export default function PostWidget({ slug, categories }) {
               <Link href={post.url} key={post.title}>
                 {post.title}
               </Link>
-              <div>
+              <div className='text-sm'>
                 <span className='mr-2'>{moment(post.updatedAt).format('MMMM DD, YYYY')}</span>
                 <ion-icon name="calendar"></ion-icon>
 
