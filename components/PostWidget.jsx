@@ -33,11 +33,11 @@ export default function PostWidget({ slug, categories }) {
 
             </div>
             <div>
-              <Link href={post.url} key={post.title}>
-                {post.title}
+              <Link href={"/post/" + post.slug} key={post.title} >
+                <span className='hover:text-zinc-700 cursor-pointer'>{post.title}</span>
               </Link>
               <div className='text-sm'>
-                <span className='mr-2'>{moment(post.updatedAt).format('MMMM DD, YYYY')}</span>
+                <span className='mr-2 text-zinc-500'>{moment(post.updatedAt).format('MMMM DD, YYYY')}</span>
                 <ion-icon name="calendar"></ion-icon>
 
               </div>

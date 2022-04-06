@@ -12,7 +12,7 @@ export default function Home({ newPosts }) {
           <div className="col-span-1 lg:col-span-8">
             {newPosts.map((post, idx) => (
               <PostCard
-                url={post.url}
+                slug={post.slug}
                 imgSrc={post.imgSrc}
                 title={post.title}
                 description={post.description}
@@ -25,7 +25,7 @@ export default function Home({ newPosts }) {
           </div>
 
           <div className="col-span-1 lg:col-span-4">
-            <div className="relative lg:fixed lg:top-[18]">
+            <div className="relative lg:sticky lg:top-[18]">
               <PostWidget />
               <Categories />
             </div>

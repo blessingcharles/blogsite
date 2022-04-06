@@ -2,7 +2,7 @@ import moment from 'moment'
 import Link from 'next/link'
 import React from 'react'
 
-export default function PostCard({ title, description, imgSrc, url, authorImgUrl, authorName, updatedAt }) {
+export default function PostCard({ title, description, imgSrc, slug, authorImgUrl, authorName, updatedAt }) {
     return (
         <div className='bg-white shadow-xl pb-5 lg:p-10 mb-10 hover:shadow-slate-400 transition duration-700'>
 
@@ -13,7 +13,7 @@ export default function PostCard({ title, description, imgSrc, url, authorImgUrl
             </div>
             <h1 className='transition duration-700 text-center mb-4 md:mb-0 cursor-pointer
                 hover:text-gray-500 text-xl md:text-2xl font-semibold px-1'>
-                <Link href={url}>
+                <Link href={"/post/" + slug}>
                     {title}
                 </Link>
             </h1>
@@ -36,7 +36,7 @@ export default function PostCard({ title, description, imgSrc, url, authorImgUrl
                 {description}
             </p>
             <div className='text-center mt-5'>
-                <Link href={url}>
+                <Link href={"post/" + slug}>
                     <span className='transition duration-500 transform hover:-translate-y-1 hover:bg-blue-400 inline-block px-5 py-3 bg-slate-500 rounded-full cursor-pointer'>
                         Continue Reading
                     </span>
