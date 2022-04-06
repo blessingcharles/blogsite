@@ -1,7 +1,50 @@
-import React from 'react'
+import moment from 'moment'
+import Link from 'next/link'
+import React, { useEffect, useState } from 'react'
 
-export default function PostWidget() {
+import { getSimilarPosts, getFeaturedPosts } from '../services/posts'
+
+export default function PostWidget({ slug, categories }) {
+
+  const [widgetPosts, setWidgetPosts] = useState([])
+
+  useEffect(async () => {
+    if (slug) {
+      const relatedPosts = await getSimilarPosts(slug, categories)
+      setWidgetPosts(relatedPosts)
+    }
+    else {
+      const featuredPosts = await getFeaturedPosts()
+      setWidgetPosts(featuredPosts)
+    }
+  }, [])
   return (
-    <div>PostWidget</div>
+    <div className='bg-white p-5 mb-5 shadow-lg'>
+      <h1 className='text-center font-bold text-lg lg:text-xl p-1 border-b-2 lg:pb-4 mb-2'>
+        {slug ? "Similar Posts" : "Featured Posts"}
+      </h1>
+      {
+        widgetPosts.map((post, idx) => (
+          <div key={idx} className="flex items-center w-full mb-5">
+            <div className='w-16 flex-none ml-2'>
+              <img
+                className='h-10 w-10 rounded-full'
+                src={post.imgSrc} alt={post.title} />
+
+            </div>
+            <div>
+              <Link href={post.url} key={post.title}>
+                {post.title}
+              </Link>
+              <div>
+                <span className='mr-2'>{moment(post.updatedAt).format('MMMM DD, YYYY')}</span>
+                <ion-icon name="calendar"></ion-icon>
+
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
   )
 }
