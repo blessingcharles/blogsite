@@ -26,7 +26,7 @@ function Navbar() {
                     <ion-icon name={isNavbarOpen ?"close" : "apps-outline"}></ion-icon>
                 </div>
 
-                <ul className={`md:flex md:items-center absolute pl-8  md:pl-0 transition-all duration-100 ease-in
+                <ul className={`md:flex md:items-center absolute pl-8  md:pl-0 transition-all duration-500 ease-in
                                 md:static bg-gray-300 md:z-auto z-[-1] w-full left-0 md:w-auto 
                                 ${isNavbarOpen ? 'top-16' : 'top-[-500px]' }`}>
                     {links.map((link, idx) => (
