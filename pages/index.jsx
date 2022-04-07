@@ -7,7 +7,7 @@ export default function Home({ newPosts }) {
   return (
     <>
 
-      <div className="container mx-auto mb-8 mt-28 px-10">
+      <div className="container mx-auto mb-8 mt-28 px-5 lg:px-10">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="col-span-1 lg:col-span-8">
             {newPosts.map((post, idx) => (
