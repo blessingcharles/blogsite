@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Author() {
+function Author({authorName , authorImgUrl , updatedAt}) {
   return (
     <div>Author</div>
   )

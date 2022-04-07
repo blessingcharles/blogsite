@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
-import { getCategories } from '../services/posts'
+import { getCategories } from '../services/categories'
+
 export default function Categories() {
 
   const [categories, setCategories] = useState([])
