@@ -9,7 +9,7 @@ import {
 
 import { PostWidget, Categories } from '../../components'
 import { getAllPosts, getPostDetails } from '../../services/posts';
-const PostDetails = ({ post }) => {
+const PostDetails = ({ post , slug }) => {
 
   return (
     <div className='container mx-auto px-10 mb-8 mt-24'>
@@ -17,9 +17,9 @@ const PostDetails = ({ post }) => {
 
         <div className='col-span-1 lg:col-span-8'>
           <PostDetail post={post}/>
-          <Author />
-          <CommentsForm />
-          <Comments />
+          {/* TODO:  <Author /> */}
+          <CommentsForm slug={slug}/>
+          <Comments slug={slug}/>
         </div>
 
         <div className='col-span-1 lg:col-span-4'>
@@ -39,7 +39,7 @@ export default PostDetails;
 export async function getStaticProps({ params }) {
   const data = await getPostDetails(params.slug)
   return {
-    props: { post: data }
+    props: { post: data , slug : params.slug }
   }
 }
 

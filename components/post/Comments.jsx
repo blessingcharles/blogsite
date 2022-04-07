@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { getSlugComments } from '../../services/comments'
 
-function Comments() {
+function Comments({slug}) {
+  const [comments , setComments] = useState([])
+
+  useEffect(async ()=>{
+    const results = await getSlugComments(slug)
+    setComments(results)
+  }, [])
+
   return (
-    <div>Comments</div>
+    <div>
+      {comments.length > 0 && (
+        <div>
+          
+        </div>
+      )}
+    </div>
   )
 }
 

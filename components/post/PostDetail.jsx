@@ -10,7 +10,7 @@ function PostDetail({ post }) {
         <div className='relative overflow-hidden shadow-md'>
           <img
             className='object-top h-full w-full rounded-t-lg'
-            src={post.imgSrc} alt={title} />
+            src={post.imgSrc} alt={post.title} />
         </div>
         <div className='mt-10'>
           <ReactMarkdown className='prose max-w-fit text-xs md:text-base'>
