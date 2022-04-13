@@ -1,6 +1,6 @@
 export const submitComment = async (name, email, comment, slug) => {};
 
-export const getSlugComments = async () => {
+export const getSlugComments = async (slug) => {
   const comments = [
     {
       name: 'jerry',

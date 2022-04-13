@@ -79,7 +79,7 @@ export const getPostDetails = async (slug) => {
     updatedAt: 'Fri Apr 12 2021 19:08:55 GMT-0500 (CDT)',
     authorName: 'th3h04xddddddddddddddddddddddd',
     content:
-      '# How Life is Going on , You need a rrrfhu jebfueerf bfibqeqf ehfiqbrfbight doesn\'t you \n' + 
+      '## How Life is Going on , You need a rrrfhu jebfueerf bfibqeqf ehfiqbrfbight doesn\'t you \n' + 
       'Enjoying *hey sinamike*\n' + 
       'Context\n' +
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." +

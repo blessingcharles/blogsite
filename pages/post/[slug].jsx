@@ -10,7 +10,8 @@ import {
 import { PostWidget, Categories } from '../../components'
 import { getAllPosts, getPostDetails } from '../../services/posts';
 const PostDetails = ({ post , slug }) => {
-
+  console.log(slug)
+  
   return (
     <div className='container mx-auto px-5 lg:px-10 mb-8 mt-24'>
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>

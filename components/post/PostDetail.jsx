@@ -12,7 +12,7 @@ function PostDetail({ post }) {
             className='object-top h-full w-full rounded-t-lg'
             src={post.imgSrc} alt={post.title} />
         </div>
-        <div className='mt-10'>
+        <div className='mt-10 pb-5'>
           <ReactMarkdown className='prose max-w-fit text-xs md:text-base'>
             {post.content}
           </ReactMarkdown>
