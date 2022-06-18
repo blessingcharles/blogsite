@@ -19,7 +19,7 @@ export default function PostWidget({ slug, categories }) {
     }
   }, [])
   return (
-    <div className='bg-white p-5 mb-5 shadow-lg'>
+    <div className='bg-white p-10 mb-5 shadow-lg'>
       <h1 className='text-center font-bold text-lg lg:text-xl p-1 border-b-2 lg:pb-4 mb-2'>
         {slug ? "Similar Posts" : "Featured Posts"}
       </h1>

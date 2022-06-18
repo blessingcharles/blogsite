@@ -49,13 +49,18 @@ const posts = [
   },
 ];
 
-export const getNewPosts = async () => {
-  return posts;
+export const getNewPosts = async (nextPost) => {
+  const count = 2 ;
+  let temp = [...posts]
+
+  return temp.splice(nextPost,count);
+
 };
 
 export const getAllPosts = async () => {
-  return posts;
+    return posts;
 }
+
 export const getSimilarPosts = async (slug, categories) => {
   return posts;
 };

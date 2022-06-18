@@ -40,7 +40,8 @@ export default PostDetails;
 export async function getStaticProps({ params }) {
   const data = await getPostDetails(params.slug)
   return {
-    props: { post: data , slug : params.slug }
+    props: { post: data , slug : params.slug } ,
+    revalidate: 50
   }
 }
 
@@ -48,6 +49,6 @@ export async function getStaticPaths() {
   const posts = await getAllPosts()
   return {
     paths: posts.map(({  slug  }) => ({ params: { slug } })),
-    fallback: true,
+    fallback: 'blocking' ,
   };
 }
